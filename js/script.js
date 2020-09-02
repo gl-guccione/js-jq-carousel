@@ -39,22 +39,45 @@ function bulletSelect() {
 
   $("img.active").removeClass("active");
 
-  if ($(this).hasClass("bullet-01")) {
+  if ($(this).hasClass("bullet-0")) {
     $("[src=\"img/img_0.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-02")) {
+  } else if ($(this).hasClass("bullet-1")) {
     $("[src=\"img/img_1.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-03")) {
+  } else if ($(this).hasClass("bullet-2")) {
     $("[src=\"img/img_2.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-04")) {
+  } else if ($(this).hasClass("bullet-3")) {
     $("[src=\"img/img_3.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-05")) {
+  } else if ($(this).hasClass("bullet-4")) {
     $("[src=\"img/img_4.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-06")) {
+  } else if ($(this).hasClass("bullet-5")) {
     $("[src=\"img/img_5.jpg\"]").addClass("active");
   }
 }
 
 // script
+
+
+// get the number of the img tags present in the document
+// and generate the bullets for it
+// the first bullet has the classes "first" and "active"
+// the last bullet has the class "last"
+// all the bullets have the classes "bullet" and "bullet-i"
+
+var qntOfImg = document.images.length;
+var htmlBulletList = "";
+
+for (var i = 0; i < qntOfImg; i++) {
+  if (i == 0) {
+    htmlBulletList += "<div class=\"bullet first bullet-0 active\"></div>";
+  } else if (i == qntOfImg - 1) {
+    htmlBulletList += "<div class=\"bullet last bullet-" + i + "\"></div>";
+  } else {
+    htmlBulletList += "<div class=\"bullet bullet-" + i + "\"></div>";
+  }
+}
+
+document.getElementsByClassName("bullet-container")[0].innerHTML = htmlBulletList;
+
 
 
 $("#next-button").click(nextImg);
