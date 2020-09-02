@@ -1,4 +1,4 @@
-
+// function for display the next image in the carousel
 function nextImg() {
   var imgActive = $("img.active");
   imgActive.removeClass("active");
@@ -15,6 +15,7 @@ function nextImg() {
   }
 }
 
+// function for display the previous image in the carousel
 function prevImg() {
   var imgActive = $("img.active");
   imgActive.removeClass("active");
@@ -31,7 +32,7 @@ function prevImg() {
   }
 }
 
-
+// function for display the correct image when click on the bullet
 function bulletSelect() {
   $(".bullet").removeClass("active");
   $(this).addClass("active");
@@ -53,8 +54,11 @@ function bulletSelect() {
   }
 }
 
+// script
+
 
 $("#next-button").click(nextImg);
+// keyCode 39 is the right arrow
 $(document).keydown(function(e){
   if (e.keyCode == 39)
   nextImg();
@@ -62,6 +66,7 @@ $(document).keydown(function(e){
 
 
 $("#prev-button").click(prevImg);
+// keyCode 37 is the left arrow
 $(document).keydown(function(e){
   if (e.keyCode == 37)
   prevImg();
