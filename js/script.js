@@ -39,18 +39,25 @@ function bulletSelect() {
 
   $("img.active").removeClass("active");
 
-  if ($(this).hasClass("bullet-0")) {
-    $("[src=\"img/img_0.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-1")) {
-    $("[src=\"img/img_1.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-2")) {
-    $("[src=\"img/img_2.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-3")) {
-    $("[src=\"img/img_3.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-4")) {
-    $("[src=\"img/img_4.jpg\"]").addClass("active");
-  } else if ($(this).hasClass("bullet-5")) {
-    $("[src=\"img/img_5.jpg\"]").addClass("active");
+  // if ($(this).hasClass("bullet-0")) {
+  //   $("[src=\"img/img_0.jpg\"]").addClass("active");
+  // } else if ($(this).hasClass("bullet-1")) {
+  //   $("[src=\"img/img_1.jpg\"]").addClass("active");
+  // } else if ($(this).hasClass("bullet-2")) {
+  //   $("[src=\"img/img_2.jpg\"]").addClass("active");
+  // } else if ($(this).hasClass("bullet-3")) {
+  //   $("[src=\"img/img_3.jpg\"]").addClass("active");
+  // } else if ($(this).hasClass("bullet-4")) {
+  //   $("[src=\"img/img_4.jpg\"]").addClass("active");
+  // } else if ($(this).hasClass("bullet-5")) {
+  //   $("[src=\"img/img_5.jpg\"]").addClass("active");
+  // }
+
+  for (var i = 0; i < qntOfImg; i++) {
+    className = "bullet-" + i;
+    if ($(this).hasClass(className)) {
+      $("[src=\"img/img_" + i + ".jpg\"]").addClass("active");
+    }
   }
 }
 
