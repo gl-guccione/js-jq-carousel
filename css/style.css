@@ -67,3 +67,9 @@
   border-radius: 50%;
   background-color: #fff;
 }
+
+.bullet-container > .bullet.active {
+  transform: scale(2);
+  background-color: #2a59ff;
+  border: 1px solid #fff;
+}
