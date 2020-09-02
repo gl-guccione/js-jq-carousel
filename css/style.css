@@ -16,6 +16,8 @@
 
 .prev-button > i,
 .next-button > i {
+  overflow: hidden;
+
   cursor: pointer;
 
   color: #2a59ff;
@@ -59,6 +61,8 @@
   width: 7px;
   height: 7px;
   margin: 3px;
+
+  cursor: pointer;
 
   border-radius: 50%;
   background-color: #fff;
